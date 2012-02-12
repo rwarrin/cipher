@@ -4,7 +4,7 @@
  * Rick W
  * 02/12/2012
  *
- * Encrypts a string of text by shifting letters 'shift' amount.
+ * Encrypts/Decrypts a string of text by shifting letters 'shift' amount.
  *
  *****************************************************************************/
 
@@ -13,9 +13,13 @@
 #include <stdlib.h>
 
 // Encrypt a string
+// text: string to be encrypted
+// shift: amount to shift letters by
 void Encrypt(std::string &text, int shift);
 
 // Decrypt a string
+// text: string to be decrypted
+// shift: amount to shift letters by
 void Decrypt(std::string &text, int shift);
 
 int main(int argc, char *argv[]) {
