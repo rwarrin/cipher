@@ -12,6 +12,7 @@ Encrypt or Decrypt a string of text one the command line.  Works by rotating eac
 		- amount to shift each letter must be a positive number.
 
 ##How To Compile
+<<<<<<< HEAD
 To build for unix and windows use `make all`
 
 To build for unix only use `make cipher`
