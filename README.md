@@ -14,9 +14,11 @@ Encrypt or Decrypt a string of text one the command line.  Works by rotating eac
 ##How To Compile
 To build for unix and windows use
 	make all
+
 To build for unix only use
 	make cipher
-To bild for windows only use
+
+To build for windows only use
 	make cipherw
 
 Windows: `g++ -mno-cygwin -o cipher cipher.cpp`
