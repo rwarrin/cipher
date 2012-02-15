@@ -2,3 +2,5 @@
 *.cpp~
 *.exe
 *.md~
+Makefile~
+*.h~
