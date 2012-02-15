@@ -8,19 +8,11 @@
  *
  *****************************************************************************/
 
+#include "crypt.h"
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-
-// Encrypt a string
-// text: string to be encrypted
-// shift: amount to shift letters by
-void Encrypt(std::string &text, int shift);
-
-// Decrypt a string
-// text: string to be decrypted
-// shift: amount to shift letters by
-void Decrypt(std::string &text, int shift);
 
 int main(int argc, char *argv[]) {
     using namespace std;
@@ -61,24 +53,3 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-// Encrypt a string by shifting each letter 'shift' amount.
-void Encrypt(std::string &text, int shift) {
-    using namespace std;
-    for(int i = 0; i < text.length(); i++) {
-        if(text[i] >= 'A' && text[i] <= 'Z')
-            text[i] = (text[i] + shift > 'Z') ? (text[i] + shift) - 26 : (text[i] + shift);
-        else if(text[i] >= 'a' && text[i] <= 'z')
-            text[i] = (text[i] + shift > 'z') ? (text[i] + shift) - 26 : (text[i] + shift);
-    }
-}
-
-// Decrypt a string by shifting each letter '-shift' amount.
-void Decrypt(std::string &text, int shift) {
-    using namespace std;
-    for(int i = 0; i < text.length(); i++) {
-        if(text[i] >= 'A' && text[i] <= 'Z')
-            text[i] = (text[i] - shift < 'A') ? (text[i] - shift) + 26 : (text[i] - shift);
-        else if(text[i] >= 'a' && text[i] <= 'z')
-            text[i] = (text[i] - shift < 'a') ? (text[i] - shift) + 26 : (text[i] - shift);
-    }
-}
